@@ -1,8 +1,11 @@
 # Librería Online – Pruebas Automatizadas con Selenium
 
 Link para el repositorio: https://github.com/jose100405/LibreriaOnline-Selenium
+
 Link de jira: https://chanisafrodriguez16.atlassian.net/jira/software/projects/LOS/boards/35/backlog
+
 link para abrir el login en local: http://localhost/libreria/login.php
+
 Credenciales de prueba: 
 Usuario: admin
 Contraseña: Admin123
