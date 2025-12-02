@@ -1,0 +1,138 @@
+:root {
+    --color-primario: #0d6efd;
+    --color-oscuro: #111827;
+    --color-fondo: #f3f4f6;
+}
+
+/* Fondo y tipografía general */
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    background-color: var(--color-fondo);
+}
+
+/* Navbar */
+.navbar {
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.12);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: 0.03em;
+}
+
+/* Hero de la página de inicio */
+.hero {
+    padding: 4rem 0 5rem;
+    background: radial-gradient(circle at top left,#1d4ed8,#111827);
+    color: #fff;
+    border-radius: 0 0 40px 40px;
+    margin-bottom: 3rem;
+}
+
+.hero h1 {
+    font-size: 2.6rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.05rem;
+    color: #e5e7eb;
+    max-width: 36rem;
+}
+
+.hero .btn {
+    padding: 0.7rem 1.6rem;
+    font-weight: 600;
+    border-radius: 999px;
+}
+
+/* Tablas de libros/autores */
+.table thead {
+    background-color: var(--color-oscuro);
+    color: #fff;
+}
+
+.table tbody tr:hover {
+    background-color: #e5e7eb;
+}
+
+/* Formularios */
+.form-control {
+    border-radius: 10px;
+}
+
+.btn-primary {
+    border-radius: 999px;
+}
+
+/* Footer */
+.site-footer {
+    background-color: var(--color-oscuro);
+    color: #9ca3af;
+    padding: 1.5rem 0;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+}
+
+.site-footer a {
+    color: #e5e7eb;
+    text-decoration: none;
+}
+.site-footer a:hover {
+    text-decoration: underline;
+}
+
+/* ============= PÁGINA DE LOGIN ============= */
+
+.login-hero {
+    padding: 4rem 0 5rem;
+    /* mismo estilo que .hero, para que se vea parte del mismo sitio */
+    background: radial-gradient(circle at top left,#1d4ed8,#111827);
+    color: #fff;
+}
+
+.login-hero-title {
+    font-size: 2.3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.login-hero-text {
+    font-size: 1.02rem;
+    color: #e5e7eb;
+    max-width: 32rem;
+}
+
+/* Tarjeta del formulario */
+.login-card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 2rem 2.2rem;
+    border: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+.login-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.login-subtitle {
+    font-size: 0.95rem;
+    color: #6b7280;
+}
+
+/* Ajuste para inputs y botón (usa tu estilo actual) */
+.login-form .form-control {
+    border-radius: 10px;
+}
+
+/* Ya tienes .btn-primary con border-radius circular, lo reutilizamos */
+.login-footer {
+    font-size: 0.85rem;
+}
+.login-card .form-label {
+    font-weight: 600;
+    color: #111827;
+    font-size: 0.9rem;
+}

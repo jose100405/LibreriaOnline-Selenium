@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Reporte de Pruebas Automatizadas - Librería Online (Login)</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background:#f9fafb; }
+        h1, h2 { color:#111827; }
+        table { border-collapse: collapse; width: 100%; margin-bottom: 20px; }
+        th, td { border: 1px solid #e5e7eb; padding: 8px 10px; font-size: 14px; }
+        th { background:#111827; color:white; text-align: left; }
+        tr.ok { background:#dcfce7; }
+        tr.fail { background:#fee2e2; }
+        .small { font-size: 12px; color:#6b7280; }
+    </style>
+</head>
+<body>
+
+<h1>Reporte de pruebas automatizadas - Módulo Login</h1>
+<p class="small">
+    Aplicación: <strong>Librería Online (dblibreria)</strong><br>
+    Tecnología: PHP, MySQL, PDO, Selenium WebDriver (C#, MSTest)<br>
+    Fecha de ejecución: <!-- aquí pones la fecha -->
+</p>
+
+<h2>Resumen general</h2>
+<table>
+    <tr>
+        <th>Total de pruebas</th>
+        <th>Correctas</th>
+        <th>Con errores</th>
+    </tr>
+    <tr class="ok">
+        <td>4</td>
+        <td>4</td>
+        <td>0</td>
+    </tr>
+</table>
+
+<h2>Detalle por caso de prueba</h2>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Nombre del caso</th>
+        <th>Historia de usuario relacionada</th>
+        <th>Precondiciones</th>
+        <th>Datos de prueba</th>
+        <th>Resultado esperado</th>
+        <th>Resultado obtenido</th>
+        <th>Estado</th>
+        <th>Evidencia</th>
+    </tr>
+
+    <tr class="ok">
+        <td>TC-LOGIN-01</td>
+        <td>Login_CaminoFeliz_CredencialesCorrectas_RedireccionaAlInicio</td>
+        <td>HU-LOGIN-01: Iniciar sesión en la Librería Online</td>
+        <td>Usuario admin creado en la tabla <code>usuarios</code></td>
+        <td>username = admin, password = Admin123</td>
+        <td>El sistema permite el acceso y redirige a <code>index.php</code>.</td>
+        <td>El navegador muestra la página de inicio y la URL termina en <code>/index.php</code>.</td>
+        <td>OK</td>
+        <td><a href="evidencias/TC-LOGIN-01.png">Captura</a></td>
+    </tr>
+
+    <tr class="ok">
+        <td>TC-LOGIN-02</td>
+        <td>Login_Negativo_CredencialesInvalidas_MuestraMensajeError</td>
+        <td>HU-LOGIN-01</td>
+        <td>Aplicación abierta en <code>login.php</code></td>
+        <td>username = admin, password = 123456</td>
+        <td>Se muestra mensaje “Usuario o contraseña incorrectos”.</td>
+        <td>Se muestra el mensaje en el <code>div#errorMessage</code>.</td>
+        <td>OK</td>
+        <td><a href="evidencias/TC-LOGIN-02.png">Captura</a></td>
+    </tr>
+
+    <tr class="ok">
+        <td>TC-LOGIN-03</td>
+        <td>Login_Limite_CamposVacios_MuestraMensajeCamposObligatorios</td>
+        <td>HU-LOGIN-02: Validar campos obligatorios</td>
+        <td>Aplicación abierta en <code>login.php</code></td>
+        <td>username = "" , password = ""</td>
+        <td>Se muestra el mensaje “Debes completar todos los campos”.</td>
+        <td>El mensaje aparece en el <code>div#errorMessage</code>.</td>
+        <td>OK</td>
+        <td><a href="evidencias/TC-LOGIN-03.png">Captura</a></td>
+    </tr>
+
+    <tr class="ok">
+        <td>TC-LOGIN-04</td>
+        <td>Login_AccesoDirecto_Index_SinSesion_RedireccionaALogin</td>
+        <td>HU-LOGIN-03: Proteger la página de inicio</td>
+        <td>No existe sesión activa (<code>$_SESSION['usuario_id']</code> vacío)</td>
+        <td>Ingresar directamente a la URL <code>/index.php</code></td>
+        <td>El sistema redirige automáticamente a <code>login.php</code>.</td>
+        <td>Al navegar a <code>index.php</code>, la URL final es <code>login.php</code>.</td>
+        <td>OK</td>
+        <td><a href="evidencias/TC-LOGIN-04.png">Captura</a></td>
+    </tr>
+</table>
+
+<p class="small">
+    Todas las pruebas se ejecutaron automáticamente con Selenium WebDriver (ChromeDriver)
+    desde el proyecto <strong>LibreriaOnline.Tests</strong> en Visual Studio.
+</p>
+
+</body>
+</html>
