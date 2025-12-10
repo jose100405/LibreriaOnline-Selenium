@@ -6,6 +6,8 @@ Link de jira: https://chanisafrodriguez16.atlassian.net/jira/software/projects/L
 
 link para abrir el login en local: http://localhost/libreria/login.php
 
+En la carpeta llamada, programacion 3 proyecto final, esta el PDF del documento final de la materia 
+
 Credenciales de prueba: 
 Usuario: admin
 Contraseña: Admin123
